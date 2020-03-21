@@ -241,6 +241,7 @@ h3 span {
 
 .goods-img-max {
     padding: 20px;
+    min-height: 320px;
 }
 
 .goods-img-max img {
