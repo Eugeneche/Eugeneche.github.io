@@ -47,6 +47,10 @@ body {
     background: #fff;
 }
 
+.hide {
+    display: none;
+}
+
 .no-decoration-link {
     text-decoration: none;
 }
@@ -168,6 +172,75 @@ h3 span {
     float: left;
 }
 
+/* ----------- top slider--------------- */
+
+.top-slider-bg {
+    min-height: 650px;
+    background-image: url('../img/top_slider.jpg');
+    background-size: cover;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.top-slider {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    position: relative;
+}
+
+.controller {
+    position: absolute;
+    left: -85px;
+    top: 65px;
+
+}
+
+.top-slider h2 {
+    font-size: 52px;
+    font-weight: 900;
+    margin: 20px auto;
+}
+
+.top-slider p {
+    margin: 10px 0;
+}
+
+.top-slider i {
+    margin: 0 10px 0 25px;
+}
+
+.top-slider .title, .top-slider span.bold {
+    font-size: 18px;
+}
+
+.top-slider .description {
+    margin-bottom: 50px;
+}
+
 /* -----------new arrivals---------- */
 
 .goods-block {
@@ -175,8 +248,7 @@ h3 span {
 }
 
 .goods-card {
-    height: 365px;
-    width: 270px;
+    max-height: 365px;
     background: #fff;
     text-align: center;
     font-size: 18px;
@@ -304,7 +376,7 @@ h3 span {
 .letter {
     background: #fff;
     margin-bottom: 120px;
-    height: 120px;
+    min-height: 120px;
     padding: 20px;
     line-height: 80px;
 }
@@ -340,71 +412,162 @@ h3 span {
     border-radius: 100%;
 }
 
-/* ----------- top slider--------------- */
 
-.top-slider-bg {
-    min-height: 650px;
-    background-image: url('../img/top_slider.jpg');
-    background-size: cover;
+/* ------ mobile 768 px ---------- */
 
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
+@media screen and (max-width: 768px) {
+    .block-1170,
+    .block-900,
+    .block-770,
+    .block-670,
+    .block-570,
+    .block-470,
+    .block-370,
+    .block-300,
+    .block-270,
+    .block-170 {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        float: none;
+    }
 
-.top-slider {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 50%;
-    -ms-flex: 0 1 50%;
-    flex: 0 1 50%;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    position: relative;
-}
+    .md-1,
+    .md-2, 
+    .md-3,
+    .md-4,
+    .md-6,
+    .md-8,
+    .md-10,
+    .md-12 {
+        margin: 0 1.25%;
+        float: left;
+    }
 
-.controller {
-    position: absolute;
-    left: -85px;
-    top: 65px;
+    .md-1 {
+        width: 5.8333333%;
+    }
+    .md-2 {
+        width: 14.1666666%;
+    }
+    .md-3 {
+        width: 22.5%;
+    }
+    .md-4 {
+        width: 30.8333333%;
+    }
+    .md-6 {
+       width: 47.5%; 
+    }
+    .md-8 {
+        width: 64.1666666%;
+    }
+    .md-10 {
+        width: 80.8333333%;
+    }
+    .md-12 {
+        width: 97.5%;
+    }
 
-}
+    .md-center {
+        text-align: center;
+    }
 
-.top-slider h2 {
-    font-size: 52px;
-    font-weight: 900;
-    margin: 20px auto;
-}
+    .md-divider {
+        margin: 30px 0;
+    }
 
-.top-slider p {
-    margin: 10px 0;
-}
+    .md-hide {
+        display: none;
+    }
 
-.top-slider i {
-    margin: 0 10px 0 25px;
-}
+    .md-show {
+        display: block;
+    }
 
-.top-slider .title, .top-slider span.bold {
-    font-size: 18px;
-}
+    .catalog-divider {
+        margin-top: 30px;
+    }
 
-.top-slider .description {
-    margin-bottom: 50px;
+    .ico-block {
+        margin: 20px;
+    }
+
+    .top-slider-bg {
+        min-height: 350px;
+    }
+
+    /* --------- mobile menu ----------- */
+
+    .show-menu {
+        position: absolute;
+    }
+
+    .mobile-nav {
+        transition: all ease 1s;
+        display: block;
+        position: fixed;       
+        width: 250px;
+        left: -250px;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 9999;
+    }
+
+    .mobile-nav-close {
+        position: relative;
+        left: 25px;
+        top: 30px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .mobile-nav.mob-active {
+        left: 0;
+    }
+
+    .shadow {
+        position: fixed;
+        background: rgba(52, 64, 75, .5);      
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .mobile-nav ul li {
+        position: relative;
+        left: 30px;
+        text-align: left;
+        float: none;
+    }
+
+     /* --------- end mobile menu ----------- */
+
+    .best-sales {
+        margin-bottom: 20px;
+    }
+
+    .site-footer .container .row {
+        display: flex;
+        flex-flow: wrap;
+    }
+    .site-footer .container .row div:nth-child(1) {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    .site-footer .container .row div:nth-child(2) {
+        order: 3;
+    }
+    .site-footer .container .row div:nth-child(3) {
+        order: 4;
+    }
+    .site-footer .container .row div:nth-child(4) {
+        order: 5;
+    }
+    .site-footer .container .row div:nth-child(5) {
+        order: 2;
+        margin-top: -20px;
+    }
 }
