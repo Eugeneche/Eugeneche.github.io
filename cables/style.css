@@ -1,0 +1,145 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+    width: 315px;
+    min-height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 20px;
+}
+
+/* main menu buttons */
+
+h1 {
+    font-family: 'Cinzel','Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: -15px;
+    color: rgb(25, 25, 117);
+}
+
+.btn-daily-program, .btn-catalog {
+    display: block;
+    margin: 50px auto;
+}
+
+.daily-program, .search {
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    height: 30px;
+    background: #00ac2b;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* daily program */
+
+input {
+    position: absolute;
+    left: 263px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+}
+
+#data-out-one,
+#data-out-two,
+#data-out-three,
+#data-out-four,
+#data-out-five,
+#data-out-six,
+#data-out-seven {
+    display: inline;
+}
+
+.table-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    height: 12px;
+}
+
+.row {
+    height: 33px;
+    padding: 5px 0;
+}
+
+.header-cable {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    left: 100px;
+}
+.header-oko {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    left: 157px;
+}
+
+.header-tool {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    left: 209px;
+}
+
+.header-quantity {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    left: 267px;
+}
+
+.select-daily {
+    position: relative;
+    width: 67px;
+    margin: 5px 0;
+}
+
+.cabel-info {
+    margin: 0 6px;
+}
+
+.total {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.celkem {
+    margin-top: 16px;
+    width: 76px;
+    height: 25px;
+    float: right;
+}
+
+.total-value {
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 61px;
+    height: 25px;
+    border: 1px solid gray;
+    float: right;
+}
+
+/* cables catalogue */
+
+.search select {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.ref-card {
+    width: 270px;
+    font-size: 14px;
+    margin: 0 auto;
+}
