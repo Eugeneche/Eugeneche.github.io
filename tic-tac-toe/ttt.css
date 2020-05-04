@@ -2,6 +2,29 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.score {
+    margin: 50px auto;
+    width: 200px;
+    height: 50px;
+
+}
+
+.global-score {
+    width: 40px;
+    height: 45px;
+    border: 1px solid gray;
+    margin: 0 16px;
+    float: left;
+    text-align: center;
+    line-height: 45px;
+}
+
+.reset {
+    display: block;
+    float: left;
+}
+
 .field {
     margin: 50px auto;
     width: 150px;

@@ -1,13 +1,15 @@
-let count = 0;
+let count, countX, countO;
+let field = document.querySelector('.field');
 
-let field = document.createElement('div');
-field.classList.add('field');
-document.body.insertAdjacentElement('afterbegin', field);
+document.querySelector('.reset').addEventListener('click', init);
+field.addEventListener('click', clickHandler);
+document.querySelector('.new-game').addEventListener('click', clearField);
 
-for(let i = 0; i < 9; i++) {
-    let square = document.createElement('div');
-    square.classList.add('square'); 
-    field.appendChild(square);
+function init() {
+    count = 0, countX = 0, countO = 0; 
+    document.querySelector('.eks').innerText = countX;
+    document.querySelector('.zero').innerText = countO;
+    clearField();
 }
 
 function clickHandler(event) {
@@ -24,8 +26,6 @@ function clickHandler(event) {
         isDraw();
     }   
 }
-
-field.addEventListener('click', clickHandler);
 
 function isWin() {
     let squaresArray = document.querySelectorAll('.square');   
@@ -51,9 +51,20 @@ function isWin() {
             if(squaresValue[line[0]] === sign &&
                 squaresValue[line[1]] === sign &&
                 squaresValue[line[2]] === sign) {
-
+                    
+                    sign === 'X' ? countX++ : countO++;
+                    document.querySelector('.eks').innerText = countX;
+                    document.querySelector('.zero').innerText = countO;
                     alert(sign + ' win!');
+                    document.querySelector('.new-game').outerHTML = '<button class="new-game">New Game</button>';
+                    document.querySelector('.new-game').addEventListener('click', function() {
+                        clearField();
+                        return setTimeout(() => {
+                            document.querySelector('.new-game').outerHTML = '<button class="new-game" disabled>New Game</button>';
+                        }, 1000);
+                    });
                     return true;
+                    
             } 
         }          
     }   
@@ -62,10 +73,17 @@ function isWin() {
 function isDraw() {
     if(count == 9) {
         alert('Draw');
+        document.querySelector('.new-game').outerHTML = '<button class="new-game">New Game</button>';
+        document.querySelector('.new-game').addEventListener('click', function() {
+            clearField();
+            return setTimeout(() => {
+                document.querySelector('.new-game').outerHTML = '<button class="new-game" disabled>New Game</button>';
+            }, 1000);
+        });
     }
 }
 
-document.querySelector('.new-game').onclick = function() {
+function clearField() {
     let squaresArray = document.querySelectorAll('.square'); 
     for(let i = 0; i < squaresArray.length; i++) {
         squaresArray[i].innerText = '';
@@ -73,3 +91,5 @@ document.querySelector('.new-game').onclick = function() {
     field.addEventListener('click', clickHandler);
     count = 0;
 }
+
+init();
