@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ttt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="score">
             <div class="global-score eks"></div>
-            <button class="reset">Reset</button>
+            <button class="reset">RESET</button>
             <div class="global-score zero"></div>
+        </div>
+        <div class="name">
+            <span class="eks active">X</span>
+            <span class="zero">O</span>
         </div>
         <div class="field">
             <div class="square"></div>
@@ -24,10 +29,9 @@
             <div class="square"></div>
             <div class="square"></div>
         </div>
-
-
         <button class="new-game" disabled>New Game</button>
     </div>
     <script src="ttt.js"></script>
+    <script src="chips.js"></script>
 </body>
 </html> 

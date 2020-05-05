@@ -27,6 +27,19 @@ function clickHandler(event) {
     }   
 }
 
+function isActive(sign) {
+    sign === 'X' ? (function() {
+        document.querySelector('span.eks').classList.remove('active');
+        document.querySelector('span.zero').classList.add('active');  
+        console.log(1); 
+        })()    
+      : (function() {
+        document.querySelector('span.zero').classList.remove('active');
+        document.querySelector('span.eks').classList.add('active');  
+        console.log(2);      
+    })();
+}
+
 function isWin() {
     let squaresArray = document.querySelectorAll('.square');   
     let squaresValue = Array(9).fill(null);     
@@ -46,6 +59,7 @@ function isWin() {
         let line = winnerLine[i];
         for(let j = 0; j < squaresValue.length; j++) {
             let sign = (count - 1) % 2 == 0 ? event.target.innerText = 'X' : event.target.innerText = 'O';
+            isActive(sign);
             squaresValue[j] = squaresArray[j].innerText;
 
             if(squaresValue[line[0]] === sign &&
@@ -55,7 +69,7 @@ function isWin() {
                     sign === 'X' ? countX++ : countO++;
                     document.querySelector('.eks').innerText = countX;
                     document.querySelector('.zero').innerText = countO;
-                    alert(sign + ' win!');
+                    createChips(`${sign} WIN!`, 'green', 3000);
                     document.querySelector('.new-game').outerHTML = '<button class="new-game">New Game</button>';
                     document.querySelector('.new-game').addEventListener('click', function() {
                         clearField();
@@ -72,7 +86,7 @@ function isWin() {
 
 function isDraw() {
     if(count == 9) {
-        alert('Draw');
+        createChips('DRAW', 'yellow', 3000);
         document.querySelector('.new-game').outerHTML = '<button class="new-game">New Game</button>';
         document.querySelector('.new-game').addEventListener('click', function() {
             clearField();
@@ -89,6 +103,8 @@ function clearField() {
         squaresArray[i].innerText = '';
     }
     field.addEventListener('click', clickHandler);
+    document.querySelector('span.eks').classList.add('active'); 
+    document.querySelector('span.zero').classList.remove('active');
     count = 0;
 }
 
