@@ -104,6 +104,7 @@
 
 .read-rules {
     cursor: pointer;
+	text-decoration: underline;
 }
 
 .sign-up-modal {
