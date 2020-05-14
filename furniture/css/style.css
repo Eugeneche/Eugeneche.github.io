@@ -42,14 +42,6 @@ h1.logo {
     clear: both;
 }
 
-/*  content  */
-
-.img-holder {
-    height: auto;
-    position: relative;
-    float: left;
-}
-
 .narrow {
     width: 31.80272108843537%;
     margin: 0 0.7653061224489796% 10px;
@@ -58,6 +50,14 @@ h1.logo {
 .wide {
     width: 48.46938775510204%;
     margin: 0 0.7653061224489796% 10px;
+}
+
+/*  content  */
+
+.img-holder {
+    height: auto;
+    position: relative;
+    float: left;
 }
 
 img {
@@ -71,8 +71,8 @@ img {
     background: rgb(255, 255, 255);
     position: absolute;
     bottom: 4px;
-    left: 45px;
-    right: 45px;
+    left: 15%;
+    right: 15%;
     text-align: center;
 }
 
@@ -96,19 +96,6 @@ img {
     border: 1px solid rgb(204, 204, 204);
 }
 
-.text-offer {
-    font-size: 13px;
-    margin: 45px 20px 0 20px;
-    line-height: 20px;
-    font-weight: 600;
-}
-
-.read-more {
-    color: red;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
 .title-offer {
     position: absolute;
     font-family: 'Dancing Script', sans-serif;
@@ -122,15 +109,110 @@ img {
     bottom: 95px;
 }
 
+.text-offer {
+    font-size: 13px;
+    margin: 45px 20px 0 20px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.read-more {
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 /*  footer  */
 
 footer {
     width: 100%;
     min-height: 100px;
     max-height: 500px;
-    margin-top: 100px;
+    margin-top: 130px;
     background: rgb(228, 228, 228);
 }
+
+/*  mobile 768 px */
+
+@media screen and (max-width: 1000px) { 
+    .container {
+        margin: 0 1%;
+    }
+
+    p.slogan {
+        margin: 7% auto 0;
+    }
+
+    .bg-type-of-goods {
+        left: 10%;
+        right: 10%;
+    } 
+
+    .title-offer {
+        font-size: 24px;
+        padding: 5px;
+        left: 10%;
+        right: 10%;
+        bottom: 100px;
+    }
+
+    .bg-offer {
+        height: 145px;
+        bottom: -100px;
+        left: 7%;
+        right: 7%;
+    }
+
+    .text-offer {
+        font-size: 13px;
+        margin: 35px 15px 0 15px;
+        line-height: 20px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bg-type-of-goods {
+        height: 25px;
+        bottom: 4px;
+        left: 7%;
+        right: 7%;
+    } 
+    .type-of-goods {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .title-offer {
+        font-size: 24px;
+        padding: 5px;
+        left: 6%;
+        right: 6%;
+        bottom: 100px;
+    }
+
+    .bg-offer {
+        height: 145px;
+        bottom: -100px;
+        left: 4%;
+        right: 4%;
+    }
+
+    .text-offer {
+        font-size: 12px;
+        margin: 30px 15px 0 15px;
+        line-height: 18px;
+        font-weight: 300;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 568px) {
+
+}
+
 
 /* ------ mobile 768 px ---------- */
 
