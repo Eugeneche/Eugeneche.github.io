@@ -181,6 +181,7 @@ footer {
     h1.logo {
         font-size: 42px;
     }
+
     .bg-type-of-goods {
         height: 25px;
         bottom: 4px;
@@ -284,6 +285,15 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+
+    p.slogan {
+        font-size: 14px;
+    }
+    
+    h1.logo {
+        font-size: 35px;
+    }
+
     .img-holder {
         float: none;
     }
@@ -292,10 +302,48 @@ footer {
         width: 98.46938775510203%;
         margin: 0 0.7653061224489796% 35px;
     }
+
+    .wide {
+        margin: 0 0.7653061224489796% 155px;
+    }
+
+    .type-of-goods {
+        font-size: 14px;
+    }
+
+    .title-offer {
+        font-size: 26px;
+        height: 15%;
+        left: 12%;
+        right: 12%;
+        top: 56%;
+    }
+
+    .bg-offer {
+        top: 71%;
+        left: 5%;
+        right: 5%;
+        margin-bottom: -15px;
+    }
 }
 
-@media scree and (max-width: 320px) {
+@media screen and (max-width: 320px) {
+    
+    .title-offer {
+        font-size: 24px;
+        height: 14%;
+        left: 8%;
+        right: 8%;
+    }
+    
+    .bg-offer {
+        left: 4%;
+        right: 4%;
+    }
 
+    .text-offer {
+        font-size: 13px;
+        line-height: 19px;
+        padding: 8% 10px 30px 10px;
+    }
 }
-
-
