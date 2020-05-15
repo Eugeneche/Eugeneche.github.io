@@ -292,10 +292,6 @@ footer {
         width: 98.46938775510203%;
         margin: 0 0.7653061224489796% 35px;
     }
-
-    img {
-        align-items: unset;
-    }
 }
 
 @media scree and (max-width: 320px) {
