@@ -157,7 +157,7 @@ footer {
     }
 
     .bg-offer {
-        height: 145px;
+        height: 150px;
         bottom: -100px;
         left: 7%;
         right: 7%;
@@ -188,19 +188,19 @@ footer {
         padding: 5px;
         left: 6%;
         right: 6%;
-        bottom: 100px;
+        bottom: 120px;
     }
 
     .bg-offer {
-        height: 145px;
-        bottom: -100px;
+        height: 170px;
+        bottom: -140px;
         left: 4%;
         right: 4%;
     }
 
     .text-offer {
-        font-size: 12px;
-        margin: 30px 15px 0 15px;
+        font-size: 13px;
+        margin: 14% 15px 0 15px;
         line-height: 18px;
         font-weight: 300;
     }
