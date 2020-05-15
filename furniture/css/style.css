@@ -132,7 +132,7 @@ footer {
     background: rgb(228, 228, 228);
 }
 
-/*  mobile 768 px */
+/*  mobile 1000 px */
 
 @media screen and (max-width: 1000px) { 
     .container {
@@ -153,20 +153,20 @@ footer {
         padding: 5px;
         left: 10%;
         right: 10%;
-        bottom: 100px;
+        bottom: 120px;
     }
 
     .bg-offer {
-        height: 150px;
-        bottom: -100px;
+        height: 170px;
+        bottom: -130px;
         left: 7%;
         right: 7%;
     }
 
     .text-offer {
-        font-size: 13px;
-        margin: 35px 15px 0 15px;
-        line-height: 20px;
+        font-size: 14px;
+        margin: 13% 15px 0 15px;
+        line-height: 21px;
         font-weight: 300;
     }
 }
@@ -199,9 +199,9 @@ footer {
     }
 
     .text-offer {
-        font-size: 13px;
+        /* font-size: 13px; */
         margin: 14% 15px 0 15px;
-        line-height: 18px;
+        /* line-height: 18px; */
         font-weight: 300;
     }
 
