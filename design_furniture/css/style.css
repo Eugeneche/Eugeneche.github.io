@@ -1,0 +1,402 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Merriweather Sans', Arial, Tahoma, sans-serif;
+}
+
+figure {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+/*  header */
+
+p.slogan {
+    margin: 75px auto 0;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+}
+
+h1.logo {
+    display: inline-block;
+    margin: 0 auto 25px;
+    font-family: 'Euphoria Script', sans-serif;
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+h1:hover {
+    transition: color ease 0.5s;
+    color: rgb(100, 100, 100);
+}
+
+/*  grid  */
+
+.wrap {
+    max-width: 980px;
+    margin: auto;
+}
+
+.container {
+    box-sizing: border-box;
+    margin: 0 -0.7653061224489796%;
+    text-align: center;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.narrow {
+    width: 31.80272108843537%;
+    margin: 0 0.7653061224489796% 0.9%;
+}
+
+.wide {
+    width: 48.46938775510204%;
+    margin: 0 0.7653061224489796% 0.9%;
+}
+
+/*  content  */
+
+.img-holder {
+    position: relative;
+    float: left;  
+}
+
+img {
+    width: 100%;
+    transform: scale(1);
+    transition: .5s ease;
+}
+
+.img-holder:hover img {
+    transform: scale(0.99); 
+    transition: .5s ease;
+}
+
+/*  titles, offers, text elements  */
+/*  top line  */
+
+.bg-type-of-goods {
+    height: 30px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 4px;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+}
+
+.type-of-goods {
+    font-size: 14px;
+    line-height: 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*  bottom line  */
+
+.title-offer {
+    position: absolute;
+    font-family: 'Dancing Script', sans-serif;
+    text-align: center;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 102, 102);
+    padding: 5px;
+    left: 90px;
+    right: 90px;
+    bottom: -6px;
+}
+
+.bg-offer {
+    position: absolute;
+    bottom: -116px;
+    left: 45px;
+    right: 45px;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.text-offer {
+    font-size: 13px;
+    padding: 45px 20px 30px 20px;
+    line-height: 20px;
+}
+
+@-moz-document url-prefix() {
+    .text-offer{
+        line-height: 1.4;
+    }
+}
+
+.read-more {
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.send-letter {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.send-letter:hover {
+    color: rgb(255, 0, 0);
+}
+
+/*  footer  */
+
+footer {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 130px;
+    background: rgb(228, 228, 228);
+}
+
+/*  mobile  */
+
+@media screen and (max-width: 1000px) { 
+
+    .container {
+        margin: 0 1%;
+    }
+
+    p.slogan {
+        margin: 7% auto 0;
+    }
+
+    .bg-type-of-goods {
+        left: 10%;
+        right: 10%;
+    } 
+
+    .title-offer {
+        font-size: 28px;
+        left: 15%;
+        right: 15%;
+        bottom: -2%;
+        padding: 4px;
+    }
+
+    .text-offer {
+        font-size: 14px;
+        padding: 8% 15px 0 15px;
+        margin-bottom: -4%;
+        line-height: 21px;
+        font-weight: 300;
+    }
+
+    .bg-offer {
+        top: 77%;
+        left: 7%;
+        right: 7%;
+    }
+
+    footer {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    p.slogan {
+        font-size: 16px;
+    }
+    
+    h1.logo {
+        font-size: 42px;
+    }
+
+    .bg-type-of-goods {
+        height: 25px;
+        bottom: 4px;
+        left: 7%;
+        right: 7%;
+    } 
+
+    .type-of-goods {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .title-offer {
+        font-size: 24px;
+        bottom: -2%;
+        padding: 3px;
+    }
+
+    .text-offer {
+        font-size: 14px;
+        padding: 8% 15px 0 15px;
+        margin-bottom: -11%;
+        line-height: 21px;
+        font-weight: 300;   
+    }
+
+    .bg-offer {
+        top: 77%;
+        left: 7%;
+        right: 7%;
+    }
+
+    footer {
+        margin-top: 160px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .title-offer {
+        font-size: 22px;
+        bottom: -5%;
+        padding: 3px;
+        left: 14%;
+        right: 14%;
+    }
+
+    .bg-offer {
+        left: 6%;
+        right: 6%;
+    }
+
+    .text-offer {
+        margin-bottom: -22%;
+    }
+
+    footer {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    
+    .img-holder .wide {
+        float: none;
+    }
+
+    .narrow {
+        margin: 0 0.7653061224489796% 30px;
+    }
+
+    .wide {
+        width: 98.46938775510204%;
+        margin: 0 0.7653061224489796% 135px;
+    }
+        
+    .bg-type-of-goods {
+        bottom: -22px;
+        left: 0;
+        right: 0;
+    }
+
+    .title-offer {
+        font-size: 28px;
+        bottom: 1%;
+        padding: 5px;
+        left: 20%;
+        right: 20%;
+    }
+
+    .bg-offer {
+        top: 77%;
+        left: 10%;
+        right: 10%;
+        margin-bottom: 0;
+    }
+
+    .text-offer {
+        font-size: 14px;
+        padding: 8% 20px 30px 20px;
+        line-height: 22px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    p.slogan {
+        font-size: 14px;
+    }
+    
+    h1.logo {
+        font-size: 35px;
+    }
+
+    .img-holder {
+        float: none;
+    }
+
+    .narrow {
+        width: 98.46938775510203%;
+        margin: 0 0.7653061224489796% 35px;
+    }
+
+    .wide {
+        margin: 0 0.7653061224489796% 155px;
+    }
+
+    .type-of-goods {
+        font-size: 14px;
+    }
+
+    .title-offer {
+        font-size: 26px;
+        height: 15%;
+        left: 12%;
+        right: 12%;
+        top: 56%;
+    }
+
+    .bg-offer {
+        top: 71%;
+        left: 5%;
+        right: 5%;
+        margin-bottom: -15px;
+    }
+
+    .text-offer {
+        margin-bottom: -9%;
+    }
+
+    footer {
+        margin-top: 160px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .title-offer {
+        font-size: 24px;
+        height: 14%;
+        left: 8%;
+        right: 8%;
+    }
+    
+    .bg-offer {
+        left: 4%;
+        right: 4%;
+    }
+
+    .text-offer {
+        font-size: 13px;
+        line-height: 19px;
+        padding: 8% 10px 30px 10px;
+    }
+}

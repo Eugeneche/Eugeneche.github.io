@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Euphoria Script';
+    src: url('../fonts/EuphoriaScript-Regular.eot');
+    src: url('../fonts/EuphoriaScript-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/EuphoriaScript-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    src: url('../fonts/MerriweatherSans-Light.eot');
+    src: url('../fonts/MerriweatherSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MerriweatherSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-SemiBold.eot');
+    src: url('../fonts/DancingScript-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DancingScript-SemiBold.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
