@@ -176,7 +176,7 @@ h3 span {
 
 .top-slider-bg {
     min-height: 650px;
-    background-image: url(../img/top_slider.jpg);
+    background-image: url('../img/top_slider.jpg');
     background-size: cover;
 
     display: -ms-flexbox;
