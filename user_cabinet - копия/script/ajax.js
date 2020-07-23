@@ -11,8 +11,6 @@ function ajax(url, method = 'POST', functionName, dataArray) {
     }
 }
 
-/* convert user data to string */
-
 function requestData(dataArr) {
     let out = '';
     for (let key in dataArr) {

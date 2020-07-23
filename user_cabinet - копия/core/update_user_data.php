@@ -7,7 +7,8 @@ $pass= trim($_POST['pass']);
 $birthday= trim($_POST['birthday']);
 $sex= trim($_POST['sex']);
 
-//Check fields
+/* Я заменил функцию проверки с проверки только на пустой e-mail, на ф-цию с проверкой на все поля (из Вашего файла signup.php), чтобы можно было проверить на ошибку и вывод чипса с ошибкой */
+
 if ($name =='' OR $pass=='' OR $email=='' OR $birthday=='' OR $sex ==''){
     echo 2;
     die;

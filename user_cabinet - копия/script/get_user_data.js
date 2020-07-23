@@ -1,4 +1,9 @@
-/* getting cookie to identificate user by e-mail */
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.datepicker');
+    let instances = M.Datepicker.init(elems, {
+        'format': 'dd-mm-yyyy',
+    });
+});
 
 let userEmail = getCookie('email');
 
@@ -18,7 +23,7 @@ function getCookie(cname) {
     return "";
 }
 
-/* getting user data from server to show only */
+/* Только вызываем данные с сервера для показа */
 
 ajax('core/get_user_data.php', undefined, showUserData, { 'email': userEmail });
 
@@ -31,7 +36,7 @@ function showUserData(result) {
     document.querySelector('#signup-birthday').value = result.birthday;
     M.updateTextFields();
 
-    /* setting inputs in disabled */
+    /* перебираем текстовые поля и задаем им неактивный статус */
 
     let t = document.querySelectorAll('input[type="text"]');
 
@@ -39,10 +44,10 @@ function showUserData(result) {
         t[i].disabled = true;
     }
 
-    /* output to the modsl window previously selected radio button */
+
     document.querySelector(`.sex[value="${result.sex}"]`).outerHTML = `<input type="radio" value="${result.sex}" name="sex" checked class="sex">`;
 
-    /* setting radio buttons in disabled */
+    /* перебираем радиобаттоны и задаем им неактивный статус */
 
     let s = document.querySelectorAll('.sex');
 
@@ -50,18 +55,17 @@ function showUserData(result) {
         s[i].disabled = true;
     }
 
-    /* hiding Sign Up button */
+    /* прячем кнопку подтверждения отправки на сервер */
+
     document.querySelector('#signup-submit').style.cssText = 'display: none';
 }
-
-/* getting user data from server to change */
 
 document.querySelector('#signup-start-update').onclick = function(event) {
     event.preventDefault();
     ajax('core/get_user_data.php', undefined, getUserData, { 'email': userEmail });
 }
 
-/* setting inputs in anabled */
+/* получаем данные с активными полями */
 
 function getUserData(result) {
     result = JSON.parse(result);
@@ -77,10 +81,11 @@ function getUserData(result) {
         t[i].disabled = false;
     }
 
-    /* output to the modsl window previously selected radio button */
+    /* выводим ранее выбранный радиобаттон */
+
     document.querySelector(`.sex[value="${result.sex}"]`).outerHTML = `<input type="radio" value="${result.sex}" name="sex" checked class="sex">`;
 
-    /* setting radio buttons in anabled */
+    /* перебираем радиобаттоны и задаем им активный статус */
 
     let s = document.querySelectorAll('.sex');
 
@@ -88,12 +93,11 @@ function getUserData(result) {
         s[i].disabled = false;
     }
 
-    /* output 'Update' button, hiding 'I Want To Update' button */
+    /* выводим кнопку подтверждения отправки на сервер, а кнопку начала изменения данных - прячем */
+
     document.querySelector('#signup-submit').style.cssText = 'display: block';
     document.querySelector('#signup-start-update').style.cssText = 'display: none';
 }
-
-/* getting new user data and updating them on the server */
 
 document.querySelector('#signup-submit').onclick = function(event) {
     event.preventDefault();
@@ -116,28 +120,26 @@ document.querySelector('#signup-submit').onclick = function(event) {
         'sex': sex,
     }
 
-    /* AJAX request to update user data */
-
     ajax('core/update_user_data.php', undefined, updateUserData, updatedData);
 
     function updateUserData(result) {
         if (result == 1) {
-            createChips('Your data has been updated successfully!', 'LightGreen', 5000);
+            createChips('Ваши данные успешно обновлены!', 'LightGreen', 5000);
         } else {
-            createChips('An update error has occurred, please try again later.', 'red', 5000);
+            createChips('Произошла ошибка обновления, повторите позже.', 'red', 5000);
         }
     }
 }
 
-/* logout function */
+/* -------- logout.js ----------- */
 
 document.querySelector('#logout').onclick = function () {
     var c = document.cookie;
     var d = new Date();
-
-    /* set cookie expires time minus 10 min from current time */
     d.setTime(d.getTime() - (10 * 60 * 1000));
     var expires = d.toUTCString();
     document.cookie = `${c}; expires=${expires}; path=/`;
     location.reload();
 }
+
+/* -------- logout.js ----------- */

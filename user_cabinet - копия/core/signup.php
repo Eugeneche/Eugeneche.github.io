@@ -1,13 +1,12 @@
 <?php
 require_once 'config.php';
 
-$email= trim($_POST['email']);
-$name= trim($_POST['name']);
-$pass= trim($_POST['pass']);
-$birthday= trim($_POST['birthday']);
-$sex= trim($_POST['sex']);
+$name = trim($_POST['name']);
+$pass = trim($_POST['pass']);
+$email = trim($_POST['email']);
+$birthday = trim($_POST['birthday']);
+$sex = trim($_POST['sex']);
 
-//Check fields
 if ($name =='' OR $pass=='' OR $email=='' OR $birthday=='' OR $sex ==''){
     echo 2;
     die;
@@ -20,12 +19,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "UPDATE users SET name='".$name."', password='".$pass."', birthday='".$birthday."', sex='".$sex."' WHERE email='".$email."'";
+$sql = "INSERT INTO users (name, email, password, birthday, sex) VALUES ('".$name."', '".$email."', '".$pass."', '".$birthday."', '".$sex."')";
 
 if ($conn->query($sql) === TRUE) {
     echo 1;
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();

@@ -84,7 +84,7 @@
                             <p>
                                 <label>
                                 <input class="sex" name="sex" type="radio" value="other" />
-                                <span>It doesn’t matter</span>
+                                <span>No matter</span>
                                 </label>
                             </p>
                         </div>
@@ -98,9 +98,10 @@
   
 
 
-    <script src="script/materialize.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="script/ajax.js"></script>
     <script src="script/get_user_data.js"></script>
+    <!-- <script src="script/logout.js"></script> объединил с get_user_data.js-->
     <script src="script/chips.js"></script>
 </body>
 

@@ -72,8 +72,8 @@
     right: -20px;
 }
 
-
 /* end modal wrap styles */
+
 
 /* slider styles */
 
@@ -98,8 +98,14 @@
     overflow-y: scroll;
 }
 
-.read-rules, .read-rules-back {
+.read-rules {
     cursor: pointer;
+	text-decoration: underline;
+}
+
+.read-rules-back {
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 .sign-up-modal {
@@ -110,23 +116,26 @@
     overflow: hidden;
 }
 
+
 /* end slider styles */
+
 
 /* chipses style */
 
 .chips {
-    border: 1px solid #46383866;
+    border: 1px solid rgba(70, 56, 56, 0.4);
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
-    background: #00000066;
+    background: rgba(0, 0, 0, .4);
 }
 
 .chips-field {
     width: 20%;
     position: fixed;
     right: 10px;
-    top: 50px;
+    top: 10px;
 }
 
-/* end chips style */
+
+/* end chipses style */
