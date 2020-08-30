@@ -11,8 +11,6 @@ body {
     display: none;
 }
 
-/* grid */
-
 .container {
     margin: auto;
     max-width: 1100px;
@@ -35,7 +33,7 @@ header {
     z-index: 999;
 }
 
-/* main menu */
+        /* main menu */
 
 .main-menu {
     list-style: none;
@@ -82,20 +80,24 @@ img.react {
 }
 
 /* --------------------- */
-.about-me {
+.main {
     min-height: 95vh;
     background: #f3f3f3;
 }
 
-.about-me::after {
+.main::after {
     content: '';
     display: block;
     clear: both;
 }
 
-.about-me .desription {
+.main .desription {
     float: left;
     width: 68.181818181818%;
+}
+
+.main p {
+    font-size: 20px;
 }
 
 .my-photo {
@@ -126,7 +128,7 @@ h3 {
     position: relative;
     width: 95%;
     margin: 0 auto 50px auto;
-    min-height: 250px;
+    /* min-height: 250px; */
 }
 
 .work-block::after {
@@ -151,19 +153,13 @@ p {
 }
 
 .photo img {
-    position: absolute;
-    width: 43.0622009569378%;
+    width: 100%;
     border: 1px solid #808080;
-    right: 0;
-    z-index: 0;
     transition: ease 0.2s;
 } 
 
 .photo img:hover {
-    position: absolute;
-    right: -2px;
-    width: 43.5%;
-    z-index: 1;
+    transform: scale(1.04);
     transition: ease 0.2s;
 }
 
@@ -184,6 +180,10 @@ footer {
 @media screen and (max-width: 1000px) {
     .container {
         max-width: 800px;
+    }
+
+    h1 {
+        margin: 60px 0;
     }
 
     .left-section {
@@ -208,34 +208,49 @@ footer {
     .container {
         max-width: 700px;
     }
+
+    h1 {
+        margin: 55px 0 40px 0;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .container {
         max-width: 700px;
     }
+
+    h1 {
+        margin: 55px 0 30px 0;
+        font-size: 25px;
+    }
+
+    .main p {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 700px) {
+    .main {
+        padding: 0 20px;
+    }
 
-    .work-block {
-        position: static;
+    h1 {
+        margin: 27% 0 35% 0;
+    }
+
+    .about {
+        width: 150%;
+    }
+
+    h3 {
+        margin-left: 5%;
     }
 
     .desription, .photo, .photo img {
-        position: static;
         display: block;
         float: none;
         width: 90%;
         margin: auto;
-    }
-
-    .photo img:hover {
-        position: static;
-        right: 0;
-        width: 90%;
-        z-index: 1;
-        transition: ease 0.2s;
     }
 }
 
@@ -282,11 +297,9 @@ footer {
 
     .mobile-nav ul li {
         position: relative;
-        /* left: 30px; */
         text-align: left;
         float: none;
         list-style: none;
-        margin: 0 0 0 50px;
+        margin: 15px 0 0 50px;
+        font-size: 20px;
     }
-
-     /* --------- end mobile menu ----------- */
