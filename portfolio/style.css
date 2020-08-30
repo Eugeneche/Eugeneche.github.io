@@ -128,7 +128,6 @@ h3 {
     position: relative;
     width: 95%;
     margin: 0 auto 50px auto;
-    /* min-height: 250px; */
 }
 
 .work-block::after {
@@ -167,6 +166,30 @@ p {
 
 footer {
     background: #c0c0c0;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+.column {
+    margin: 10px;
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+}
+
+.column img {
+    margin: 10px 5px;
+}
+
+.column a {
+    text-decoration: none;
 }
 
 /* ---------------- */
