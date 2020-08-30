@@ -10,13 +10,32 @@
 
     <header>
         <div class="container">
+            <nav class="left-section mobile-nav hidden">
+                <img src="img/close_menu_25.svg" class="mobile-nav-close" alt="">                       
+                <ul>
+                    <li name="react">react</li>
+                    <li name="js">javascript</li>
+                    <li name="html">layout</li>  
+                </ul>    
+                <ul>
+                    <li class="show-all hidden">show all</li>
+                </ul>                                     
+            </nav>
+            <div class="shadow hidden"></div> 
+            <img src="img/show_menu_25.svg" class="show-menu hidden md-show" alt="">
             <ul class="main-menu left-section">
-                <li name="react"><img class="react" src="img/react.svg" alt="linkedin icon"/>react</li>
+                <li name="react"><img class="react" src="img/react.svg" alt="react icon"/>react</li>
                 <li name="js">&#123;javascript&#125;</li>
                 <li name="html">&#60;layout&#47;&#62;</li>              
                 <li class="show-all hidden">show all</li>
             </ul>
             <ul class="main-menu right-section">
+                <li>
+                    <span><a class="my-link" href="https://drive.google.com/file/d/1XIBpzdlStuW33v56YVlDhlpp6uz6gpb8/view?usp=sharing" target="blanc">my_CV</a></span>
+                </li>
+                <li><a class="my-link" href="mailto:eugene.bizmail@gmail.com">eugene.bizmail@gmail.com</a></li>
+            </ul>
+            <ul class="main-menu resourses-section">
                 <li>                 
                     <a href="https://www.linkedin.com/in/chernomorets/" target="blanc">
                         <img class="linkedin" src="img/linkedin.svg" alt="linkedin icon"/>
@@ -27,26 +46,29 @@
                         <img class="github" src="img/github.svg" alt="github icon"/>
                     </a>
                 </li>
-
-                <li>
-                    <a class="my-link" href="https://drive.google.com/file/d/1XIBpzdlStuW33v56YVlDhlpp6uz6gpb8/view?usp=sharing" target="blanc">CV</a>
-                </li>
-                <li><a class="my-link" href="mailto:eugene.bizmail@gmail.com">eugene.bizmail@gmail.com</a></li>
-            </ul>
-
-            
+            </ul>         
         </div>
     </header>
 
     <main>
+        <div class="about-me">
+            <div class="container">
+                <div class="desription">
+                    <h1>Hello!<br>I'm Yevhen Chernomorets</h1>
+                    <p>
+                        I'm a Junior Frontend Developer.
+                    </p>
+                    <p>
+                        In my full-time job I'm a worker, but in my free time I'm a programmer :).
+                    </p> 
+                </div>
+                <div class="my-photo">
+                    <img src="img/my_photo_350.jpg" alt="my photo">
+                </div>
+         
+            </div>
+        </div>
         <div class="container">
-            <h1>Hello!<br>I'm Yevhen Chernomorets</h1>
-            <p>
-                I'm a Junior Frontend Developer.
-            </p>
-            <p>
-                In my full-time job I'm a worker, but in my free time I'm a programmer :).
-            </p>
             <h2>My Works</h2>
 
             <div class="work-block react">
@@ -56,17 +78,17 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia recusandae soluta, fugiat earum laborum fuga, quibusdam architecto esse rem enim provident. Accusamus modi, nihil libero atque veniam architecto quo?
                     </p>
                 </div>
-                <div class="screenshot"><a href="https://eugeneche.github.io/soc-net/" target="blanc"><img src="img/social_network_450.jpg" alt="social network project"/></a></div>
+                <div class="photo"><a href="https://eugeneche.github.io/soc-net/" target="blanc"><img src="img/social_network_450.jpg" alt="social network project"/></a></div>
             </div>
             
             <div class="work-block react">
                 <h3>Currency Exchange - ReactJS</h3>
                 <div class="desription">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia recusandae soluta, fugiat earum laborum fuga, quibusdam architecto esse rem enim provident. Accusamus modi, nihil libero atque veniam architecto quo?
+                        In 'React. Lite level' course I created a currency exchange website as React application. And I studied React Components, JSX, React Router, props, state and other.
                     </p>
                 </div>
-                <div class="screenshot"><a href="https://currency-exchange-6bccf.firebaseapp.com/" target="blanc"><img src="img/currency-exchange_450.jpg" alt="currency exchange online"/></a></div>
+                <div class="photo"><a href="https://currency-exchange-6bccf.firebaseapp.com/" target="blanc"><img src="img/currency-exchange_450.jpg" alt="currency exchange online"/></a></div>
             </div>
 
             <div class="work-block js">
@@ -76,17 +98,27 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia recusandae soluta, fugiat earum laborum fuga, quibusdam architecto esse rem enim provident. Accusamus modi, nihil libero atque veniam architecto quo?
                     </p>
                 </div>
-                <div class="screenshot"><a href="https://eugeneche.github.io/product_slider/" target="blanc"><img src="img/product_slider_450.jpg" alt="slider"/></a></div>
+                <div class="photo"><a href="https://eugeneche.github.io/product_slider/" target="blanc"><img src="img/product_slider_450.jpg" alt="slider"/></a></div>
+            </div>
+
+            <div class="work-block js">
+                <h3>User Account - JavaScript</h3>
+                <div class="desription">
+                    <p>
+                        During JavaScript course I created personal account project. In it I implemented sign up and sign in forms, sending data to server (AJAX requests), saving data in database, checking user data, displaying messages wether pegistration completed sucsessfully or not.   
+                    </p>
+                </div>
+                <div class="photo"><a href="https://eugeneche.github.io/user_cabinet/" target="blanc"><img src="img/user_account_450.jpg" alt="user cabinet"/></a></div>
             </div>
             
             <div class="work-block html">
                 <h3>Layout project - HTML, CSS</h3>
                 <div class="desription">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia recusandae soluta, fugiat earum laborum fuga, quibusdam architecto esse rem enim provident. Accusamus modi, nihil libero atque veniam architecto quo?
+                        As part of HTML5 and CSS3 Layout course, I created a website layout based on the PSD template: the layout of the home page, catalog page, and product page. I learned the principle of semantic markup of HTML5 and code verification. To display on mobile devices, I added a responsive menu and wrote a JavaScript slider on the product page.
                     </p>
                 </div>
-                <div class="screenshot"><a href="https://eugeneche.github.io/layout_course_project/" target="blanc"><img src="img/layout_450.jpg" alt="html, css layout"/></a></div>
+                <div class="photo"><a href="https://eugeneche.github.io/layout_course_project/" target="blanc"><img src="img/layout_450.jpg" alt="html, css layout"/></a></div>
             </div>
 
             <div class="work-block html">
@@ -96,7 +128,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia recusandae soluta, fugiat earum laborum fuga, quibusdam architecto esse rem enim provident. Accusamus modi, nihil libero atque veniam architecto quo?
                     </p>
                 </div>
-                <div class="screenshot"><a href="https://eugeneche.github.io/layout_course_project/" target="blanc"><img src="img/layout.jpg" alt="html, css layout"/></a></div>
+                <div class="photo"><a href="https://eugeneche.github.io/layout_course_project/" target="blanc"><img src="img/layout_450.jpg" alt="html, css layout"/></a></div>
             </div>
 
             <h2>Languages</h2>

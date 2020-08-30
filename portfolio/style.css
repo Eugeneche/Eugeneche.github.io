@@ -7,13 +7,8 @@ body {
     color: #424242;
 }
 
-.hidden, ul.main-menu li.show-all.hidden {
+.hidden, ul.main-menu li.show-all.hidden, .show-menu {
     display: none;
-}
-
-main {
-    flex: 1;
-    margin-top: 50px;
 }
 
 /* grid */
@@ -46,15 +41,17 @@ header {
     list-style: none;
     position: relative;
     margin-left: -15px;
+    margin-right: -10px;
 }
 
 ul.main-menu li {
     display: inline;
+    margin-right: 10px;
     cursor: pointer;
 }
 
-.left-section li {
-    margin-right: 10px;
+li a {
+    text-decoration: none;
 }
 
 .left-section {
@@ -65,16 +62,12 @@ ul.main-menu li {
     float: right;
 }
 
-img.github {
-    position: absolute;
-    top: -2px;
-    right: 222px;
+.resourses-section {
+    float: right;
 }
 
-img.linkedin {
-    position: absolute;
-    top: -2px;
-    right: 267px;
+img.github, img.linkedin {
+    margin-bottom: -7px;
 }
 
 img.react {
@@ -89,9 +82,34 @@ img.react {
 }
 
 /* --------------------- */
+.about-me {
+    min-height: 95vh;
+    background: #f3f3f3;
+}
+
+.about-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.about-me .desription {
+    float: left;
+    width: 68.181818181818%;
+}
+
+.my-photo {
+    float: left;
+    width: 31.818181818181%;
+    margin: 60px 0;
+}
+
+.my-photo img {
+    width: 100%;
+}
 
 h1 {
-    margin-left: 50px;
+    margin: 80px 0;
     font-weight: 500;
 }
 
@@ -107,9 +125,8 @@ h3 {
 .work-block {
     position: relative;
     width: 95%;
-    margin: auto;
-    min-height: 393px;
-    /* background: lightgray; */
+    margin: 0 auto 50px auto;
+    min-height: 250px;
 }
 
 .work-block::after {
@@ -123,12 +140,17 @@ h3 {
     width: 56.9377990430622%;
 }
 
-.screenshot {
+p {
+    margin-block-start: 0;
+    margin-right: 20px;
+}
+
+.photo {
     float: left;
     width: 43.0622009569378%;
 }
 
-.screenshot img {
+.photo img {
     position: absolute;
     width: 43.0622009569378%;
     border: 1px solid #808080;
@@ -137,11 +159,10 @@ h3 {
     transition: ease 0.2s;
 } 
 
-.screenshot img:hover {
+.photo img:hover {
     position: absolute;
     right: -2px;
     width: 43.5%;
-    /* left: 0; */
     z-index: 1;
     transition: ease 0.2s;
 }
@@ -164,11 +185,66 @@ footer {
     .container {
         max-width: 800px;
     }
+
+    .left-section {
+        display: none;
+    }
+
+    .my-link {
+        display: none;
+    }
+
+    .resourses-section {
+        position: absolute;
+        right: 16px;
+    }
+
+    .show-menu {
+        display: block;
+    }
 }
+
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .work-block {
+        position: static;
+    }
+
+    .desription, .photo, .photo img {
+        position: static;
+        display: block;
+        float: none;
+        width: 90%;
+        margin: auto;
+    }
+
+    .photo img:hover {
+        position: static;
+        right: 0;
+        width: 90%;
+        z-index: 1;
+        transition: ease 0.2s;
+    }
+}
+
     /* --------- mobile menu ----------- */
 
     .show-menu {
         position: absolute;
+        left: 16px;
+        top: 13px;
     }
 
     .mobile-nav {
@@ -185,8 +261,8 @@ footer {
 
     .mobile-nav-close {
         position: relative;
-        left: 25px;
-        top: 30px;
+        left: 16px;
+        top: 16px;
         width: 25px;
         height: 25px;
     }
@@ -206,9 +282,11 @@ footer {
 
     .mobile-nav ul li {
         position: relative;
-        left: 30px;
+        /* left: 30px; */
         text-align: left;
         float: none;
+        list-style: none;
+        margin: 0 0 0 50px;
     }
 
      /* --------- end mobile menu ----------- */
