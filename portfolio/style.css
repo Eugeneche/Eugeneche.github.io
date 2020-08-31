@@ -162,6 +162,11 @@ p {
     transition: ease 0.2s;
 }
 
+.work-block img.svg {
+    margin: 0 5px;
+    height: 25px;
+}
+
 /* footer */
 
 footer {
@@ -190,6 +195,7 @@ footer {
 
 .column a {
     text-decoration: none;
+    color: #6261c4;
 }
 
 /* ---------------- */
