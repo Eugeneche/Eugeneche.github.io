@@ -45,7 +45,15 @@ header {
 ul.main-menu li {
     display: inline;
     margin-right: 10px;
+}
+
+.main-menu li {
     cursor: pointer;
+}
+
+li.active {
+    font-weight: 600;
+    cursor: default;
 }
 
 li a {
@@ -286,50 +294,50 @@ footer {
 
     /* --------- mobile menu ----------- */
 
-    .show-menu {
-        position: absolute;
-        left: 16px;
-        top: 13px;
-    }
+.show-menu {
+    position: absolute;
+    left: 16px;
+    top: 13px;
+}
 
-    .mobile-nav {
-        transition: all ease 1s;
-        display: block;
-        position: fixed;       
-        width: 250px;
-        left: -250px;
-        top: 0;
-        bottom: 0;
-        background: #fff;
-        z-index: 9999;
-    }
+.mobile-nav {
+    transition: all ease 1s;
+    display: block;
+    position: fixed;       
+    width: 250px;
+    left: -250px;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999;
+}
 
-    .mobile-nav-close {
-        position: relative;
-        left: 16px;
-        top: 16px;
-        width: 25px;
-        height: 25px;
-    }
-    
-    .mobile-nav.mob-active {
-        left: 0;
-    }
+.mobile-nav-close {
+    position: relative;
+    left: 16px;
+    top: 16px;
+    width: 25px;
+    height: 25px;
+}
 
-    .shadow {
-        position: fixed;
-        background: rgba(52, 64, 75, .5);      
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+.mobile-nav.mob-active {
+    left: 0;
+}
 
-    .mobile-nav ul li {
-        position: relative;
-        text-align: left;
-        float: none;
-        list-style: none;
-        margin: 15px 0 0 50px;
-        font-size: 20px;
-    }
+.shadow {
+    position: fixed;
+    background: rgba(52, 64, 75, .5);      
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.mobile-nav ul li {
+    position: relative;
+    text-align: left;
+    float: none;
+    list-style: none;
+    margin: 15px 0 0 50px;
+    font-size: 20px;
+}

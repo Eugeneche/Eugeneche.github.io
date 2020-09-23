@@ -20,17 +20,11 @@ function selectWorks(type) {
     closeMenu();
 }
 
-function canselHiddenStyle() {
+function cancelHiddenStyle() {
     works.forEach(node => {
         node.classList.contains('hidden') && node.classList.remove('hidden');      
     });
 }
-
-/* function showShowAll() {
-    let showAll = document.querySelector('li.show-all');
-    showAll.classList.contains('hidden')
-        && showAll.classList.remove('hidden');
-} */
 
 function showShowAll() {
     let allShowAll = document.querySelectorAll('li.show-all');
@@ -40,41 +34,41 @@ function showShowAll() {
     });
 }
 
-/* function hideShowAll(e) {
-    let showAll = document.querySelector('li.show-all');
-    showAll.classList.add('hidden');
-    canselHiddenStyle();
-    e.stopImmediatePropagation();
-    closeMenu();
-} */
-
 function hideShowAll(e) {
     let allShowAll = document.querySelectorAll('li.show-all');
     allShowAll.forEach(el => {
         el.classList.add('hidden');
-        canselHiddenStyle();
+        cancelHiddenStyle();
+        cancelActiveStyle();
         e.stopPropagation();
-        closeMenu();
-        
+        closeMenu();       
     });
 }
 
-/* document.querySelector('.left-section').addEventListener('click', e => {  
-    canselHiddenStyle();
-    showShowAll();
-    e.target.hasAttribute('name') && selectWorks(e.target.getAttribute('name'));
-}); */
+let menuItems = document.querySelectorAll('.left-section li');
+
+function addActiveStyle(e) {
+    e.target.classList.add('active');
+}
+
+function cancelActiveStyle() {
+    menuItems.forEach(el => {
+        el.classList.contains('active') && el.classList.remove('active');
+    });
+}
 
 let menus = document.querySelectorAll('.left-section');
 
 menus.forEach(menu => {
     menu.addEventListener('click', e => {  
-        canselHiddenStyle();
+        cancelHiddenStyle();
+        cancelActiveStyle();
         e.stopPropagation();
-        showShowAll();
-        e.target.hasAttribute('name') && selectWorks(e.target.getAttribute('name'));
+        showShowAll();        
+        e.target.hasAttribute('class') && selectWorks(e.target.getAttribute('class'));
+        addActiveStyle(e);
     });
-})
+});
 
 let allShowAll = document.querySelectorAll('li.show-all');
     allShowAll.forEach(el => {
