@@ -93,6 +93,10 @@ img.react {
     background: #f3f3f3;
 }
 
+.main.work-block {
+    width: 100%;
+}
+
 .main::after {
     content: '';
     display: block;
