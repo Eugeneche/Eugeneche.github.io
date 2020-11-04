@@ -11,7 +11,7 @@ function showHeader() {
 
 /* -----------main menu ---------------- */
 
-let works = document.querySelectorAll('.work-block');
+let works = document.querySelectorAll('.for-hiding');
 
 function selectWorks(type) {
     works.forEach(node => {
@@ -57,16 +57,22 @@ function cancelActiveStyle() {
     });
 }
 
+
+
 let menus = document.querySelectorAll('.left-section');
 
 menus.forEach(menu => {
-    menu.addEventListener('click', e => {  
-        cancelHiddenStyle();
-        cancelActiveStyle();
+    menu.addEventListener('click', e => {
         e.stopPropagation();
-        showShowAll();        
-        e.target.hasAttribute('class') && selectWorks(e.target.getAttribute('class'));
-        addActiveStyle(e);
+        if(e.target.classList.contains('mob-active') || e.target.classList.contains('mobile-nav-close')) {
+            closeMenu();
+        } else {
+            cancelHiddenStyle();
+            cancelActiveStyle();       
+            showShowAll();        
+            e.target.hasAttribute('class') && selectWorks(e.target.getAttribute('class'));
+            addActiveStyle(e);
+        }       
     });
 });
 
@@ -77,13 +83,14 @@ let allShowAll = document.querySelectorAll('li.show-all');
 /* -----------mobile menu ---------------- */
 
 document.querySelector('.show-menu').addEventListener('touchstart', () => {
-    document.querySelector('.mobile-nav').classList.add('mob-active');
+    setTimeout( () => {
+        document.querySelector('.mobile-nav').classList.add('mob-active');  
+    }, 250);
     document.querySelector('.shadow').classList.remove('hidden');
+    
 });
 
 function closeMenu() {
     document.querySelector('.mobile-nav').classList.remove('mob-active');
     document.querySelector('.shadow').classList.add('hidden');
 }
-
-document.querySelector('.mobile-nav-close').addEventListener('touchstart', closeMenu);
