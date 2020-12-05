@@ -95,23 +95,21 @@ img.react {
 
 /* --------------------- */
 .main {
-    /* background: #f3f3f3; */
-    width: 100%;
     background: url(./img/main_screen_light.jpg);
     background-position: center;
-    height: 100vh;
+    height: 95vh;
 }
 
-.main::after {
+/* .main::after {
     content: '';
     display: block;
     clear: both;
-}
+} */
 
-.main .desription {
+/* .main .desription {
     float: left;
     width: 68.181818181818%;
-}
+} */
 
 .main p {
     font-size: 20px;
@@ -128,7 +126,7 @@ img.react {
 } */
 
 h1 {
-    margin: 80px 0;
+    margin: 40vh 0 0 60px;
     font-weight: 500;
 }
 
@@ -257,13 +255,11 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+
     .main {
-        /* background: #f3f3f3; */
-        width: 100%;
-        background: url(./img/main_screen_light.jpg);
         background-position: right;
-        height: 100vh;
     }
+
     .container {
         max-width: 700px;
     }
