@@ -117,13 +117,7 @@ img.react {
     font-size: 20px;
 }
 
-/* .bg {
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-} */
-
-.my-photo {
+/* .my-photo {
     float: left;
     width: 31.818181818181%;
     margin: 60px 0;
@@ -131,7 +125,7 @@ img.react {
 
 .my-photo img {
     width: 100%;
-}
+} */
 
 h1 {
     margin: 80px 0;
@@ -263,6 +257,13 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+    .main {
+        /* background: #f3f3f3; */
+        width: 100%;
+        background: url(./img/main_screen_light.jpg);
+        background-position: right;
+        height: 100vh;
+    }
     .container {
         max-width: 700px;
     }
