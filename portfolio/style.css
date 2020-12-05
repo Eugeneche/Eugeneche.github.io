@@ -12,7 +12,7 @@ body {
 
 .container {
     margin: auto;
-    width: 1100px;
+    max-width: 1100px;
 }
 
 .container::after {
@@ -126,7 +126,7 @@ h3 {
     clear: both;
 }
 
-.desription {
+.description {
     float: left;
     width: 56.9377990430622%;
 }
@@ -193,14 +193,14 @@ footer {
 
 @media screen and (max-width: 1200px) {
     .container {
-        width: 900px;
+        max-width: 900px;
     }
 }
 
 @media screen and (max-width: 1000px) {
 
     .container {
-        width: 800px;
+        max-width: 800px;
     }
 
     .left-section {
@@ -230,15 +230,18 @@ footer {
 
 @media screen and (max-width: 800px) {
     .container {
-        width: 700px;
+        max-width: 700px;
     }
 }
 
 @media screen and (max-width: 700px) {
+    .container {
+        max-width: 700px;
+    }
 
     .main {
         background: none;
-        height: 95vh;
+        height: auto;
         overflow: visible;
     }
 
@@ -257,7 +260,7 @@ footer {
         margin-left: 5%;
     }
 
-    .desription, .photo, .photo img {
+    .description, .photo, .photo img {
         display: block;
         float: none;
         width: 90%;
@@ -279,8 +282,8 @@ footer {
     position: fixed;
     width: 220px;
     left: -260px;
-    top: 0;
-    bottom: 0;
+    top: -16px;
+    bottom: -16px;
     background: #fff;
     z-index: 1;
 }

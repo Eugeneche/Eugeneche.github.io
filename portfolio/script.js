@@ -57,8 +57,6 @@ function cancelActiveStyle() {
     });
 }
 
-
-
 let menus = document.querySelectorAll('.left-section');
 
 menus.forEach(menu => {
