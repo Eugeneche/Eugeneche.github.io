@@ -95,7 +95,10 @@ img.react {
 
 /* --------------------- */
 .main {
-    background: #f3f3f3;
+    /* background: #f3f3f3; */
+    width: 100%;
+    background: url(./img/main_screen.jpg);
+    height: 100vh;
 }
 
 .main::after {
@@ -112,6 +115,12 @@ img.react {
 .main p {
     font-size: 20px;
 }
+
+/* .bg {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+} */
 
 .my-photo {
     float: left;
