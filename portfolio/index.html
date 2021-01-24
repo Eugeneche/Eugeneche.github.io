@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Yevhen Chernomorets</title>
     <link rel="stylesheet" href="style.css">
@@ -55,12 +56,24 @@
     <main>
         <div class="main for-hiding">
             <div class="container for-hiding">
+
                 <h1>Yevhen Chernomorets</h1>
                 <h2>Junior Front-End Developer</h2>
+         
             </div>
         </div>
         <div class="container">
             <h2>My Works</h2>
+
+            <div class="work-block for-hiding js">
+                <h3>Kanban Board - Desktop app in JavaScript</h3>
+                <div class="description">
+                    <p>
+                        In this project I used ES6 Modules to split the JS-code into independent parts.<br> The tasks is moved through stages using HTML5 Drag and Drop API. <br> The application state is written to Local Storage, thus it is restored after page reload. <br> For styling I used CSS Flexbox and SASS preprocessor. The app is bundled with Webpack and deployed to https://app.netlify.com/.
+                    </p>
+                </div>
+                <div class="photo"><a href="https://relaxed-bose-5102e8.netlify.app/" target="blanc"><img src="img/kanban_450.jpg" alt="kanban board"/></a></div>
+            </div>
 
             <div class="work-block for-hiding react">
                 <h3>Movie Searching - ReactJS</h3>
@@ -72,16 +85,6 @@
                 <div class="photo"><a href="https://eugeneche.github.io/movies-search/" target="blanc"><img src="img/movies_450.jpg" alt="social network project"/></a></div>
             </div>
 
-            <div class="work-block for-hiding react">
-                <h3>Social Network project - ReactJS</h3>
-                <div class="description">
-                    <p>
-                        With this project, I continue to study React in depth. State management is done using the Redux library. Also in this project I used the Axios, Thunk, Compose libraries, HOCs, hooks and other. Application architecture is divided into parts: UI, business logic layer, data access layer. I study how features work "under the hood". A real web-server is used.
-                    </p>
-                </div>
-                <div class="photo"><a href="https://eugeneche.github.io/soc-net/" target="blanc"><img src="img/social_network_450.jpg" alt="social network project"/></a></div>
-            </div>
-            
             <div class="work-block for-hiding react">
                 <h3>Currency Exchange - ReactJS</h3>
                 <div class="description">
@@ -153,7 +156,7 @@
             </div>
 
             <div class="work-block for-hiding svg">
-                <h3>SVG</h3>
+                <h3>SVG Icons</h3>
                 <img class="svg" src="img/cart_black_empty_30.svg" alt="empty cart svg icon"/>
                 <img class="svg" src="img/cart_stroke_empty_30.svg" alt="empty cart svg icon"/>
                 <img class="svg" src="img/magnifier.svg" alt="empty cart svg icon"/>
