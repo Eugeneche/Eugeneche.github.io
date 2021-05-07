@@ -1,0 +1,138 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    width: 100%;
+    min-height: 80px;
+    background: rgb(3, 81, 228);
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.left-menu.desktop {
+    min-width: 150px;
+}
+
+.left-menu li {
+    list-style: none;
+    margin-left: -35px;
+    font-size: 18px;
+}
+
+.left-menu a {
+    text-decoration: none;
+}
+
+.left-menu button {
+    outline: none;
+    border: none;
+    padding: 0;
+    background: none; 
+}
+
+.mobile, .show-mobile-menu {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 150px);
+}
+
+.controller {
+    margin-top: 20px;
+}
+
+.phrase-ru, .phrase-translated {
+		display: flex;
+	align-items: center;
+	justify-content: center;
+    min-height: 100px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    margin: 20px 0;
+    /*text-align: center;*/
+    line-height: 33px;
+    font-size: 24px;
+}
+
+.phrase-ru {
+    background: #ffc6c6;
+}
+
+.phrase-translated {
+    background: #d7d3ff;
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width: 1000px) {
+
+    h1 {
+        width: 70%;
+        margin: 22px auto;
+        font-size: 28px;
+    }
+
+    .left-menu.desktop {
+        display: none;
+    }
+
+    main {
+        width: 90%;
+        margin: auto;
+    }
+
+    .show-mobile-menu {
+        display: block;
+        outline: none;
+        border: none;
+        padding: 0;
+        background: none; 
+        position: absolute;
+        left: 25px;
+        top: 30px;
+    }
+
+    .left-menu.mobile {
+        display: block;
+        width: 250px;
+        min-height: 100vh;
+        position: absolute;
+        left: -250px;
+        background: #ffffff;
+        transition: ease .5s;
+    }
+
+    .left-menu.mobile ul {
+        margin: 50px 0 0 20px;
+    }
+
+    .close-mobile-menu {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
