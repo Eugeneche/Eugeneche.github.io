@@ -23,7 +23,7 @@ let allPhrases = {
             'Мой брат не дома': 'Můj bratr není doma',
             'Иржи в гостях': 'Jiří je na návštěvě',
             'Мои родители в ресторане': 'Moji rodiče jsou v restauraci',
-            'Они не в театре': 'Jana a Kateřina nejsou v divadle',
+            'Яна и Катержина не в театре': 'Jana a Kateřina nejsou v divadle',
         },
         2: {      
             'Где вы?': 'Kde jste?',      
