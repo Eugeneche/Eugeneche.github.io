@@ -45,8 +45,9 @@ let allPhrases = {
             'У тебя есть ручка?': 'Máš propisku?',  
         },
         2: {      
-            'Ты голоден?': 'Máš hlad?',      
-
+            'Ты голоден?': 'Máš hlad?', 
+            'Ты прав!': 'Máš pravdu!',     
+            'Ты свободен': 'Máš volno',
         },
         3: {      
             'Что у тебя есть?': 'Co máš?', 
@@ -151,7 +152,7 @@ function getCurrentLevel(){
 
 /* END CREATING LEVELS */
 
-/* EVENTS */
+/* LEARNING */
 
    /* start */
 let start = function(){
@@ -184,19 +185,24 @@ function startLearning(obj){
         return printedPhrase
     }
 
-    /* function playAudio(){
+    function playAudio(phrase){
         let audio = document.createElement('div')
         audio.classList.add('audio')
-        audio.innerHTML = `<div><audio src="audio/1.mp3" controls></audio></div>` 
+        //check if phrase contains '?' or '!'
+        if ((phrase[phrase.length - 1] === '?') || 
+        (phrase[phrase.length - 1] === '!')) {
+            phrase = phrase.slice(0, length - 1)
+        } 
+        audio.innerHTML = `<div><audio src="audio/${phrase}.mp3" autoplay></audio></div>` 
         return audio  
-    } */
+    }
 
     function showPhrase(){
         document.querySelector('.phrase-ru').appendChild(createPhraseDiv(currentKeyPhrase))
 
         setTimeout(() => { 
             document.querySelector('.phrase-translated').appendChild(createPhraseDiv(obj[currentKeyPhrase])) 
-            //document.querySelector('.phrase-translated').appendChild(playAudio())
+            document.querySelector('.phrase-translated').appendChild(playAudio(obj[currentKeyPhrase]))
         }, delayBeforeTranslation * 1000) 
 
         hidePhrase()
@@ -207,7 +213,7 @@ function startLearning(obj){
             
             document.querySelector('.phrase-ru').removeChild(document.querySelector('.phrase-block')) 
             document.querySelector('.phrase-translated').removeChild(document.querySelector('.phrase-block')) 
-            //document.querySelector('.phrase-translated').removeChild(document.querySelector('.audio')) 
+            document.querySelector('.phrase-translated').removeChild(document.querySelector('.audio')) 
             randomPhrase(arrayKeys)
 
             
