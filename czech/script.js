@@ -3,7 +3,7 @@
     /* playing phrases settings */
 
 let delayBeforeTranslation = 5
-let cycleDuration = 4
+let cycleDuration = 5
 
     /* end playing phrases settings */
 
