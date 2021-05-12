@@ -64,16 +64,16 @@ main {
 }
 
 .phrase-ru, .phrase-translated {
-		display: flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
     min-height: 100px;
     border-bottom: 1px solid grey;
     width: 100%;
     margin: 20px 0;
-    /*text-align: center;*/
     line-height: 33px;
     font-size: 24px;
+	text-align: center;
 }
 
 .phrase-ru {
@@ -83,8 +83,6 @@ main {
 .phrase-translated {
     background: #d7d3ff;
 }
-
-
 
 /* mobile */
 
