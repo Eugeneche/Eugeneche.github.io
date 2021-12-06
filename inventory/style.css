@@ -146,6 +146,11 @@ input {
     width: 50%;
 }
 
+button.fast-sum-start-btn {
+    font-weight: 600;
+    color: #004e00;
+}
+
 /* edit */
 .edit-top, .edit-middle, .edit-bottom, .edit-buttons {
     display: flex;
@@ -170,10 +175,6 @@ select {
 .notes-edit-input {
     width: calc(71% + 4px);
 }
-
-/* .model-output, .count-output {
-
-} */
 
 .note-output {
     width: 90%;

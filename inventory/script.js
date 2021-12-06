@@ -134,8 +134,8 @@ function updateOutput() {
                 </div>        
             </div>
             <div class="row-result-bottom">
-                <button class="edit-item-btn" data-edit-id=${item.id}>Upravit položku</button>
-                <button class="fast-sum-start-btn" data-sum-id=${item.id}>Rychle přidat</button>
+                <button class="edit-item-btn" data-edit-id=${item.id}>&#9998;Upravit položku</button>
+                <button class="fast-sum-start-btn" data-sum-id=${item.id}>+ Rychle přidat</button>
             </div>
         </div>`)
     })
