@@ -106,8 +106,8 @@ function updateOutput() {
             </div>
             <div class="fast-sum">
                 <input class="fast-sum-input" type="number" placeholder="počet kusů" autofocus>
-                <button class="fast-sum-cancel-btn">Zrušit</button>
-                <button class="fast-sum-confirm-btn">Přidat</button>
+                <button class="fast-sum-cancel-btn cancel">Zrušit</button>
+                <button class="fast-sum-confirm-btn save">Přidat</button>
             </div>
             <div class="edit">
                 <div class="edit-top">
@@ -143,7 +143,7 @@ function updateOutput() {
 
 function showFastSum(id) {
     let currentItem = document.getElementById(`${id}`)
-    currentItem.querySelector('.fast-sum').style.display = 'block'
+    currentItem.querySelector('.fast-sum').style.display = 'flex'
 }
 
 function hideFastSum(id) {
@@ -186,11 +186,6 @@ function hideEditDialogs(id) {
     })
     
 }
-
-/* function getSelectedOperand() {
-    console.log(document.getElementById('signs').value || 'minus')
-    return document.getElementById('signs').value || 'minus'
-  } */
 
 function editItem(id) {
 

@@ -137,6 +137,15 @@ input {
     display: none;
 }
 
+.fast-sum {
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.fast-sum-input {
+    width: 50%;
+}
+
 /* edit */
 .edit-top, .edit-middle, .edit-bottom, .edit-buttons {
     display: flex;
