@@ -139,6 +139,8 @@ function updateOutput() {
             </div>
         </div>`)
     })
+
+    saveToFile()
 }
 
 function showFastSum(id) {
@@ -247,3 +249,28 @@ function deleteItem(id) {
     updateOutput()
 }
 
+function saveToFile() {
+    let file = document.querySelector('#file')
+    file.innerHTML = ''
+
+    let storeFromLocal = JSON.parse(localStorage.getItem('state'))
+    
+    storeFromLocal.map((item, i) => {
+        return file.insertAdjacentHTML('beforeend', 
+        `<div id=${item.id} class="row-result">
+            <span>${i + 1}. ${item.model} - ${item.count} ks</span>
+            <div class="note-output">${item.note}</div>
+        </div>`)
+    })
+}
+
+
+var fileName = "inventory.txt";
+var fileContent = document.querySelector('#file').innerText;
+var myFile = new Blob([fileContent], {type: 'text/plain'});
+
+window.URL = window.URL || window.webkitURL;
+var dlBtn = document.getElementById("download");
+
+dlBtn.setAttribute("href", window.URL.createObjectURL(myFile));
+dlBtn.setAttribute("download", fileName);
