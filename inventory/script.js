@@ -105,8 +105,8 @@ function updateOutput() {
                 <div class="note-output">${item.note}</div>
             </div>
             <div class="fast-sum">
-                <input class="fast-sum-input" type="number" placeholder="počet kusů" autofocus>
                 <button class="fast-sum-cancel-btn cancel">Zrušit</button>
+                <input class="fast-sum-input" type="number" placeholder="počet kusů" autofocus>                        
                 <button class="fast-sum-confirm-btn save">Přidat</button>
             </div>
             <div class="edit">
@@ -117,12 +117,12 @@ function updateOutput() {
                 <div class="edit-middle">
                     <label for="signs">Vyberte:</label>
                     <select id="signs">
-                        <option value="minus" selected>-</option>
-                        <option value="plus">+</option>
-                        <option value="multiply">X</option>
-                        <option value="divide">/</option>
+                        <option value="minus" selected>odčítat -</option>
+                        <option value="plus">přidat +</option>
+                        <option value="multiply">násobit &#215;</option>
+                        <option value="divide">rozdělit &#247;/</option>
                     </select>
-                    <input class="count-new-edit-input" type="number" placeholder="počet kusů">
+                    <input class="count-new-edit-input" type="number" placeholder="kusy">
                 </div>
                 <div class="edit-bottom">
                     <input class="notes-edit-input" type="text" placeholder="poznámky" value=${item.note}>                    
@@ -254,7 +254,7 @@ function saveToFile() {
     file.innerHTML = ''
 
     let storeFromLocal = JSON.parse(localStorage.getItem('state'))
-    
+
     storeFromLocal.map((item, i) => {
         return file.insertAdjacentHTML('beforeend', 
         `<div id=${item.id} class="row-result">

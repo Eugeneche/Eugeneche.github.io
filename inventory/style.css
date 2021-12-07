@@ -8,7 +8,7 @@ body {
 
 h3 {  
     position: absolute;
-    right: 38px;
+    right: 43px;
     font-size: 15px;
     text-transform: uppercase;
 }
@@ -153,8 +153,13 @@ a {
     padding: 5px 0;
 }
 
+.fast-sum>button {
+    margin: 0 3%;
+}
+
 .fast-sum-input {
     width: 50%;
+    margin: 0 5px;
 }
 
 button.fast-sum-start-btn {
@@ -170,8 +175,12 @@ button.fast-sum-start-btn {
     margin: 5px 0;
 }
 
+.edit-top .model-input {
+    width: 50%;
+}
+
 label {
-    width: calc(41% - 31px);
+    width: calc(51% - 80px);
     font-size: 14px;
 }
 
@@ -184,7 +193,7 @@ select {
 }
 
 .notes-edit-input {
-    width: calc(71% + 4px);
+    width: calc(81% + 4px);
 }
 
 .note-output {
