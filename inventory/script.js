@@ -29,16 +29,17 @@ function init() {
         state = []
     } 
 
-    let userAgent = navigator.userAgent;
-         let browserName;
-         
-        if(userAgent.match(/fb|fbav/i)){
-            let warn = document.createElement('div')
-            warn.classList.add('warn')
-            document.querySelector('.warn').innerText = 'Pro využití všech funkcí doporučujeme použít jeden z následujících prohlížečů: Chrome, Safari, Firefox, Opera'
-            document.querySelector('.header').insertAdjacentElement('afterend', warn)
+    let userAgent = navigator.userAgent
+    function addBrowserWarn() {
+        let warn = document.createElement('div')
+        warn.classList.add('warn')
+        document.querySelector('.header').insertAdjacentElement('afterend', warn)
+        document.querySelector('.warn').innerText = 'Pro využití všech funkcí doporučujeme použít jeden z následujících prohlížečů: Chrome, Safari, Firefox, Opera'
+        
+    }     
+        if(userAgent.match(/moz|fbav/i)){
+            addBrowserWarn()          
         }
-    console.log(navigator.userAgent)
 }
 
 function createRowItem() {
