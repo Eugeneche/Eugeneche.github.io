@@ -28,6 +28,7 @@ function init() {
     } else {
         state = []
     } 
+    console.log(navigator.userAgent)
 }
 
 function createRowItem() {
@@ -36,7 +37,7 @@ function createRowItem() {
     rowItem.setAttribute('id', Date.now())
     rowItem.insertAdjacentHTML('afterbegin', 
         `<div class="row-input-top">
-            <input class="model-input" type="text" placeholder="reference" autofocus>
+            <input class="model-input" type="text" placeholder="reference (povinné)" autofocus>
             <input class="count-input" type="number" placeholder="počet kusů">
             <button class="save">Uložit</button>
         </div>
@@ -111,7 +112,7 @@ function updateOutput() {
             </div>
             <div class="edit">
                 <div class="edit-top">
-                    <input class="model-input" type="text" placeholder="reference" value=${item.model}>
+                    <textarea class="model-input" type="text" placeholder="reference">${item.model}</textarea>
                     <input class="count-input" type="number" placeholder="počet kusů" value=${item.count}>                  
                 </div>
                 <div class="edit-middle">
@@ -120,12 +121,12 @@ function updateOutput() {
                         <option value="minus" selected>odčítat -</option>
                         <option value="plus">přidat +</option>
                         <option value="multiply">násobit &#215;</option>
-                        <option value="divide">rozdělit &#247;/</option>
+                        <option value="divide">rozdělit &#247;</option>
                     </select>
                     <input class="count-new-edit-input" type="number" placeholder="kusy">
                 </div>
                 <div class="edit-bottom">
-                    <input class="notes-edit-input" type="text" placeholder="poznámky" value=${item.note}>                    
+                    <textarea class="notes-edit-input" type="text" placeholder="poznámky">${item.note}</textarea>                    
                 </div>        
                 <div class="edit-buttons">
                     <button class="delete">Vymazat položku</button> 
@@ -169,8 +170,6 @@ function calculateFastSum(id) {
         updateLocalState()
         updateOutput()
         currentItem.querySelector('.fast-sum').style.display = 'none'
-        //currentItem.querySelector('input').value = ''
-        //console.log(state.count = valueToAdd + previousFigure)
     })
 }
 
@@ -183,10 +182,8 @@ function hideEditDialogs(id) {
     let currentItem = document.getElementById(`${id}`)
     currentItem.querySelector('.hide-edit-btn').addEventListener('click', () => {
         currentItem.querySelector('.edit').style.display = 'none'
-        //currentItem.querySelector('count-new-edit-input').value = ''
         showUnnesessaryFields(id)
-    })
-    
+    })   
 }
 
 function editItem(id) {
@@ -225,7 +222,6 @@ function editItem(id) {
 
 function hideUnnesessaryFields(id) {
     let currentItem = document.getElementById(`${id}`)
-    //currentItem.querySelector('.row-result-top').style.display = 'none'
     currentItem.querySelector('.row-result-bottom').style.display = 'none'
 }
 
@@ -256,21 +252,21 @@ function saveToFile() {
     let storeFromLocal = JSON.parse(localStorage.getItem('state'))
 
     storeFromLocal.map((item, i) => {
-        return file.insertAdjacentHTML('beforeend', 
-        `<div id=${item.id} class="row-result">
-            <span>${i + 1}. ${item.model} - ${item.count} ks</span>
-            <div class="note-output">${item.note}</div>
-        </div>`)
+        //2 tab left to decrease left margin in "inventory.txt" file
+        file.insertAdjacentHTML('beforeend', 
+`<div id=${item.id} class="row-result"> 
+    <span>${i + 1}. ${item.model} - ${item.count} ks</span>
+    <div class="note-output">${item.note}</div>
+</div>`)
     })
+
+    let fileName = 'inventory.txt'
+    let fileContent = document.querySelector('#file').innerText
+    let myFile = new Blob([fileContent], {type: 'text/plain'})
+
+    window.URL = window.URL || window.webkitURL
+    let dlBtn = document.getElementById('download')
+
+    dlBtn.setAttribute('href', window.URL.createObjectURL(myFile))
+    dlBtn.setAttribute('download', fileName)
 }
-
-
-var fileName = "inventory.txt";
-var fileContent = document.querySelector('#file').innerText;
-var myFile = new Blob([fileContent], {type: 'text/plain'});
-
-window.URL = window.URL || window.webkitURL;
-var dlBtn = document.getElementById("download");
-
-dlBtn.setAttribute("href", window.URL.createObjectURL(myFile));
-dlBtn.setAttribute("download", fileName);
