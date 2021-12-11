@@ -50,6 +50,14 @@ a {
     padding-bottom: 10px;
 }
 
+.warn {
+    width: 95%;
+    margin: auto;
+    background-color: #ffff00;
+    padding: 5px;
+    font-size: 12px;
+}
+
 .add-note {
     position: absolute;
     right: 5px;
