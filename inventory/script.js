@@ -28,6 +28,13 @@ function init() {
     } else {
         state = []
     } 
+
+    let userAgent = navigator.userAgent;
+         let browserName;
+         
+         if(userAgent.match(/fb|fbav/i)){
+             document.querySelector('.warn').innerText = 'Pro využití všech funkcí doporučujeme použít jeden z následujících prohlížečů: Chrome, Safari, Firefox, Opera'
+           }
     console.log(navigator.userAgent)
 }
 
@@ -271,4 +278,4 @@ function saveToFile() {
     dlBtn.setAttribute('download', fileName)
 }
 
-document.querySelector('footer').innerText = `${navigator.userAgent}`
+//document.querySelector('footer').innerText = `${navigator.userAgent}`
