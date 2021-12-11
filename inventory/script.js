@@ -270,3 +270,5 @@ function saveToFile() {
     dlBtn.setAttribute('href', window.URL.createObjectURL(myFile))
     dlBtn.setAttribute('download', fileName)
 }
+
+document.querySelector('footer').innerText = `${navigator.userAgent}`
