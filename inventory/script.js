@@ -37,7 +37,7 @@ function init() {
         document.querySelector('.warn').innerText = 'Pro využití všech funkcí doporučujeme použít jeden z následujících prohlížečů: Chrome, Safari, Firefox, Opera'
         
     }     
-        if(userAgent.match(/moz|fbav/i)){
+        if(userAgent.match(/fb|fbav/i)){
             addBrowserWarn()          
         }
 }
