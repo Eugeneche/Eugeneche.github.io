@@ -271,7 +271,7 @@ function saveToFile() {
 </div>`)
     })
 
-    let fileName = 'inventory.txt'
+    let fileName = 'inventory.xls'
     let fileContent = document.querySelector('#file').innerText
     let myFile = new Blob([fileContent], {type: 'text/plain'})
 
