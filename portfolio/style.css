@@ -94,6 +94,11 @@ img.react {
 }
 
 /* --------------------- */
+
+main {
+	flex: 1;
+}
+
 .main {
     background: url(./img/main_screen_light.jpg);
     background-position: center;
