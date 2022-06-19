@@ -186,7 +186,7 @@ main>.container {
 @media screen and (max-width: 576px) {
 
     main>.container {
-        top: 10vh;
+        top: 7vh;
     }
 
     .elements {
@@ -194,8 +194,24 @@ main>.container {
         margin-left: 0;
     }
 
+    .logo {
+        margin-bottom: 4vh;
+    }
+
     .logo img {
         width: 60vw;
+    }
+
+    .work {
+        margin-bottom: 3vh;
+    }
+
+    .socials {
+        margin-bottom: 4vh;
+    }
+
+    .contacts-btn {
+        margin-bottom: 2vh;
     }
 
     .interactive {
