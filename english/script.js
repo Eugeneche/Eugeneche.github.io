@@ -9,53 +9,184 @@ let cycleDuration = 10
 
 let allPhrases = {
    
-    'English Prases': {
-        1: {      
-            'Я начал изучать JavaScript, потому что раньше меня интересовала разработка веб-страниц.': 
-                'I started learning JavaScript because I as previously interested in web page development',      
-            'И я бы хотел в этом продвинуться': 
-                'And I would like to make an advance in it',      
-            'Я изучаю Frontend около двух лет и изучаю его как на онлайн-курсах, так и самостоятельно': 
-                'I have been learning Frontend about two years, and I study it  both through online courses and on my own',      
-            'Создание и размещение веб-контента на русском и украинском языках': 
-                'Creation and placement of web content in Russian and Ukrainian', 
-            'Подготовка базовой графики к содержанию. Редактирование видео.': 
-                'Preparation of basic graphics for content. Video editing.', 
-            'До этой работы я работал менеджером по работе с клиентами - общение с клиентами': 
-                'Before this job, I worked as account manager – communication with customers', 
-            'от первоначального общения с постоянным или новым клиентом до выполненной работы': 
-                'from initial communication with a permanent or new customer to completed work', 
-            'определение требований заказчика': 
-                'identifying customer requirements',
-            'определение необходимых мер по выполнению заказа': 
-                'identifying the necessary order fulfillment measures', 
-            'составление бюджета, планирование и распределение обязанностей': 
-                'budgeting, planning and assigning responsibilities',  
-        },
-    
-    },
-    'Prasal verbs': {
-        1: {      
-            'Я начал изучать JavaScript, потому что раньше меня интересовала разработка веб-страниц.': 
-                'I started learning JavaScript because I as previously interested in web page development',      
-            'И я бы хотел в этом продвинуться': 
-                'And I would like to make an advance in it',      
-            'Я изучаю Frontend около двух лет и изучаю его как на онлайн-курсах, так и самостоятельно': 
-                'I have been learning Frontend about two years, and I study it  both through online courses and on my own',      
-            'Создание и размещение веб-контента на русском и украинском языках': 
-                'Creation and placement of web content in Russian and Ukrainian', 
-            'Подготовка базовой графики к содержанию. Редактирование видео.': 
-                'Preparation of basic graphics for content. Video editing.', 
-            'До этой работы я работал менеджером по работе с клиентами - общение с клиентами': 
-                'Before this job, I worked as account manager – communication with customers', 
-            'от первоначального общения с постоянным или новым клиентом до выполненной работы': 
-                'from initial communication with a permanent or new customer to completed work', 
-            'определение требований заказчика': 
-                'identifying customer requirements',
-            'определение необходимых мер по выполнению заказа': 
-                'identifying the necessary order fulfillment measures', 
-            'составление бюджета, планирование и распределение обязанностей': 
-                'budgeting, planning and assigning responsibilities',  
+    'A2': {
+        1: {
+            ' Я невероятно устал в последнее время': 
+                'I\'ve been incredibly tired lately',
+            'Я трачу так много денег в последнее время': 
+                'I\'ve been spending so much money lately',
+            'Я невероятно занят в последнее время': 
+                'I\'ve been incredibly busy lately',
+            'Я пытаюсь разобраться во всем этом беспорядке последние два дня': 
+                'I\'ve been trying to sort out all this mess for the last two days',
+            'Я пытаюсь расчистить весь этот беспорядок со вчерашнего дня': 
+                'I\'ve been trying to clear up all this mess since yesterday',
+            'Как долго ты учишь английский? ': 
+                'How long have you been learning English?',
+            'Я учу английский пару лет': 
+                'I\'ve been learning English for a couple of years',
+            'Я изучаю английский около года': 
+                'I\'ve been learning English for about a year',
+            'Как долго ты изучаешь испанский? Около шести месяцев': 
+                'How long have you been learning Spanish? For about six months',
+            'Когда ты начал изучать английский? Я начал учить английский два года назад': 
+                'When did you start learning English? I started learning English two years ago',
+            'Как долго ты меня ждешь? Около десяти минут':
+                'How long have you been waiting for me? For about ten minutes',
+            'Я жду тебя полчаса':
+                'I\'ve been waiting for you for half an hour',  
+                'Как долго ты здесь находишься?':
+                'How long have you been staying here?',
+                'Как давно ты здесь?':
+                'How long have you been here?',
+                'Я всегда был верен своим принципам':
+                'I\'ve always been faithful to my principles',
+                'Он всегда был верен своим принципам и убеждениям':
+                'He\'s always been faithful to his principles and beliefs',
+                'Насколько я помню, я учу английский около двух лет':
+                'As far as I remember, I\'ve been learning English for about two years',
+                'Я должен сказать, что мы знаем друг друга очень давно':
+                'I have to say that we\'ve known each other for a very long time',
+                'Я должен добавить, что мы знаем друг друга с детства':
+                'I have to add that we\'ve known each other since childhood',
+                'Мы знаем друг друга с детства, поэтому я могу положиться на него':
+                'We\'ve known each other since childhood so I can rely on him',
+                'Я занимаюсь этим весь день':
+                'I\'ve been doing it all day',
+                'Я занят этой рутиной с утра':
+                'I\'ve been busy with this routine since morning',
+                'Я читал книгу весь день':
+                'I was reading a book all day',
+                'Я весь день смотрю разные ролики на ютубе':
+                'I\'ve been watching different videos on YouTube all day',
+                'Это невероятно трудный день, и я никогда не чувствовал себя таким истощенным':
+                'It\'s an incredibly difficult day and I\'ve never felt so exhausted',
+                'Они загрузили меня таким количеством заданий сегодня, что я никогда не был так истощен':
+                'They\'ve loaded me with so many tasks today that I\'ve never been so exhausted',
+                'Я живу здесь почти десять лет':
+                'I\'ve been living here for almost ten years',
+                'Как долго они женаты?':
+                'How long have they been married?',
+                'Они женаты около пяти лет':
+                'They\'ve been married for about five years',
+                'Что ты делал все это время? Ничего, я только что пришел':
+                'What have you been doing all this time? Nothing, I\'ve just come',
+                'Что ты делал все это время? Я пытался найти решение такой сложной проблемы':
+                'What have you been doing all this time? I\'ve been trying to find a solution to such a complicated problem',
+                'Я пытаюсь найти решение такой сложной проблемы последние два часа':
+                'I\'ve been trying to find a solution to such a complicated problem for the last two hours',
+                'Я пытаюсь сделать карьеру с тех пор, как окончил университет':
+                'I\'ve been trying to make a career since I graduated from university',
+                'Я очень интенсивно изучаю английский с тех пор, как наткнулся на этот канал':
+                'I\'ve been learning English very intensively since I came across this channel',
+                'Я улучшил свой английский значительно с тех пор, как наткнулся на этот революционный метод изучения английского':
+                'I\'ve improved my English significantly since I came across this revolutionary method of learning English',
+                'Откровенно говоря, я сделал заметный прогресс в этой области с тех пор, как начал тренироваться на регулярной oснове':
+                'Frankly speaking, I\'ve made a noticeable progress in this area since I started training on a regular basis',
+                'Я буду ждать твоего сообщения':
+                'I\'ll be waiting for your message',
+                'Я буду ждать твоего ответа':
+                'I\'ll be waiting for your answer',
+                'Я буду ждать тебя':
+                'I\'ll be waiting for you',
+                'Я буду ждать твоего имейла':
+                'I\'ll be waiting for your email',
+                'Я буду ждать твоего звонка':
+                'I\'ll be waiting for your call',
+                'Я буду ждать последних новостей':
+                'I\'ll be waiting for the latest news',
+                'Пока он будет сидеть дома, я буду играть со своими друзьями':
+                'While he\'s staying at home, I\'ll be playing with my friends',
+                'В то время как они будут отдыхать, я буду работать':
+                'While they\'re having a rest, I\'ll be working',
+                'Я буду отдыхать, в то время как он будет готовиться к этому экзамену':
+                'I\'ll be having a rest while he\'s preparing for this exam',
+                'Пока он будет писать этот отчет, я буду анализировать некоторые другие цифры':
+                'While he\'s writing this report, I\'ll be analyzing some other figures',
+                'Я достигну среднего уровня к следующему месяцу':
+                'I will have reached an Intermediate level by next month',
+                'Он закончит школу к следующему году':
+                'He will have finished school by next year',
+                'Она окончит университет к следующему году':
+                'She will have graduated from university by next year',
+                'Самолет приземлится к тому времени':
+                'The plane will have landed by that time',
+                'Он придет в офис к десяти':
+                'He will have come to the office by ten',
+                'Я закончу все к следующей неделе':
+                'I will have finished everything by next week',
+                'Я закончу смотреть это видео к тому времени, как она придет':
+                'I will have finished watching this video by the time she comes',
+                'Я закончу писать этот отчет к тому времени, как он придет домой':
+                'I will have finished writing this report by the time he comes home',
+                'Я предполагаю, они построят мост к следующему лету':
+                'I suppose they will have built the bridge by next summer',
+                'Я ожидаю, они закончат сооружать мост к следующему сезону':
+                'I expect they will have finished constructing the bridge by next season',
+                'Когда она пришла домой, я смотрел тот фильм около часа':
+                'When she came home, I had been watching that movie for about an hour',
+                'Когда он мне позвонил, я смотрел то видео около получаса':
+                'When he called me, I had been watching that video for about half an hour',
+                'Я готовил около часа, когда зазвонил телефон':
+                'I had been cooking for about an hour when the phone rang',
+                'Я работал три часа, когда он пришел в офис':
+                'I had been working for three hours when he came to the office',
+                'Я искал свои ключи около двадцати минут, прежде чем я нашел их':
+                'I had been looking for my keys for about twenty minutes before I found them',
+                'Она искала свою сумку почти два часа, прежде чем я ее нашел':
+                'She had been looking for her bag for almost two hours before I found it',
+                'Я учил английский два года, прежде чем достиг среднего уровня':
+                'I had been learning English for two years before I reached an Intermediate level',
+                'Я буду учиться в университете два года к следующему году':
+                'I will have been studying at university for two years by next year',
+                'Я проработаю здесь около двух месяцев к следующему году':
+                'I will have been working here for about two months by next year',
+                'Она будет учиться в университете три года к следующему году':
+                'She will have been studying at university for three years by next year',
+                'Я буду работать здесь год к следующей неделе':
+                'I will have been working here for a year by next week',
+                'Я буду находиться здесь два дня к следующей неделе':
+                'I will have been staying here for two days by next week',
+                'Я буду здесь три дня к следующей неделе':
+                'I will have been here for three days by next week',
+                'Я буду путешествовать два дня к тому времени, когда она увидит нас':
+                'I will have been travelling for two days by the time she sees us',
+                'Я буду учиться здесь два года к тому времени':
+                'I will have been studying here for two years by that time',
+                'Я буду проходить этот курс в течение трех месяцев к тому времени':
+                'I will have been doing this course for three months by that time',
+                'Я уже проходил тот курс две недели к тому времени':
+                'I had already been doing that course for two weeks by that time',
+                'Я жду этого час. Я больше не могу ждать этого':
+                'I\'ve been waiting for it for an hour. I can\'t wait for it anymore',
+                'Я так долго жду это':
+                'I\'ve been waiting for it for so long',
+                'Я жду очень долго':
+                'I\'ve been waiting for a very long time',
+                'Когда он позвонил мне, я занимался той работой около пятнадцати минут':
+                'When he called me, I had been doing that work for about fifteen minutes',
+                'Он очень интенсивно изучал английский язык в течение трех лет, прежде чем достиг продвинутого уровня в английском':
+                'He had been learning English very intensively for three years before he reached an Advanced level in English',
+                'Он невероятно усердно занимался пару недель, прежде чем сдал свой последний экзамен':
+                'He had been studying incredibly hard for a couple of weeks before he passed his final exam',
+                'Я достигну следующего уровня к тому времени, как закончу этот курс':
+                'I will have reached the next level by the time I finish this course',
+                'Он ожидает, что заработает эту сумму денег к следующему году':
+                'He expects that he will have earned this sum of money by next year',
+                'Они будут жить в Америке пять лет к концу этого месяца':
+                'They will have been living in America for five years by the end of this month',
+                'Я буду работать здесь год к августу':
+                'I will have been working here for a year by August',
+                'Они будут жить вместе четыре года к следующему месяцу':
+                'They will have been living together for four years by next month',
+                'Он достигнет следующего уровня к тому времени, как он закончит изучать этот курс':
+                'He will have reached the next level by the time he finishes studying this course',
+                'К тому времени, как он пришел домой, она готовила два часа':
+                'By the time he came home, she had been cooking for two hours',
+                'Я ожидаю, что заработаю эту сумму денег к следующему году':
+                'I expect that I will have earned this sum of money by next year',
+                'Как долго ты здесь учишься?':
+                'How long have you been studying here?'
         },
     
     },
