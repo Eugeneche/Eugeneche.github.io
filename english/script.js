@@ -11,7 +11,7 @@ let allPhrases = {
    
     'A2': {
         1: {
-            ' Я невероятно устал в последнее время': 
+            'Я невероятно устал в последнее время': 
                 'I\'ve been incredibly tired lately',
             'Я трачу так много денег в последнее время': 
                 'I\'ve been spending so much money lately',
