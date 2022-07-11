@@ -2,8 +2,8 @@
 
     /* playing phrases settings */
 
-let delayBeforeTranslation = 10
-let cycleDuration = 10
+let delayBeforeTranslation = 20
+let cycleDuration = 20
 
     /* end playing phrases settings */
 
