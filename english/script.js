@@ -2,8 +2,8 @@
 
     /* playing phrases settings */
 
-let delayBeforeTranslation = 20
-let cycleDuration = 20
+let delayBeforeTranslation = 10
+let cycleDuration = 10
 
     /* end playing phrases settings */
 
@@ -190,6 +190,31 @@ let allPhrases = {
         },
     
     },
+
+    'My': {
+        1: 
+        {"Это находится за пределами человеческого понимания":
+        "It exceeds the power of human understanding'",
+        "Стоимость превысила наши оценки.":
+        "The cost exceeded our estimate",
+        "Это противоречило бы краткости, которой я собирался придерживаться":
+        "It would thwart with my intended brevity",
+        "Его имя не разглашается из уважения к её родителям":
+        "His name has not been released, out of consideration for her parents",
+        "Они сразу признали свою ошибку":
+        "They readily acknowledged their mistake",
+        "Его заказ товара имеет приоритет, поскольку мы получили его первым":
+        "His merchandise order takes precedence because we received it first",
+        "Закон требует равных прав для всех, независимо от расы, религии или пола":
+        "The law requires equal treatment for all, regardless of race, religion, or sex",
+        "Вы должны постепенно увеличивать продолжительность тренировки":
+        "'You should gradually increase the duration of your workout",
+        "Постепенно, моей лодыжке стало лучше":
+        "'Gradually, my ankle got better",
+        "Нам потребуется достаточное количество времени, чтобы разобраться с этой проблемой":
+        "We need sufficient time to deal with the problem",
+        }
+    }
 
 }
 
