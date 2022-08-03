@@ -198,7 +198,7 @@ let allPhrases = {
         "Стоимость превысила наши оценки.":
         "The cost exceeded our estimate",
         "Это противоречило бы краткости, которой я собирался придерживаться":
-        "It would thwart with my intended brevity",
+        "It would contradict my intended brevity",
         "Его имя не разглашается из уважения к её родителям":
         "His name has not been released, out of consideration for her parents",
         "Они сразу признали свою ошибку":
