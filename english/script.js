@@ -213,6 +213,8 @@ let allPhrases = {
         "'Gradually, my ankle got better",
         "Нам потребуется достаточное количество времени, чтобы разобраться с этой проблемой":
         "We need sufficient time to deal with the problem",
+        "При разработке программного обеспечения мы должны предусмотреть непреднамеренные действия пользователя":
+        "When developing software, we must anticipate unintended user actions",
         }
     }
 
